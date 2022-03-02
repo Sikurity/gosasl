@@ -1,3 +1,4 @@
+//go:build kerberos
 // +build kerberos
 
 package gosasl
@@ -10,7 +11,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/beltran/gssapi"
+	"github.com/Sikurity/gssapi"
 )
 
 // GSSAPIMechanism corresponds to GSSAPI SASL mechanism

@@ -1,5 +1,5 @@
-module github.com/beltran/gosasl
+module github.com/Sikurity/gosasl
 
-go 1.14
+go 1.17
 
-require github.com/beltran/gssapi v0.0.0-20200324152954-d86554db4bab
+require github.com/Sikurity/gssapi v0.0.0-20220302044924-2069146683ea

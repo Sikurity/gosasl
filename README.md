@@ -1,25 +1,23 @@
 # Go SASL library
 
-[![Build Status](https://travis-ci.com/beltran/gosasl.svg?branch=master)](https://travis-ci.com/beltran/gosasl)
-
-gosasl is a library for different SASL mechanisms. Currently GSSAPI, DIGEST-MD5, PLAIN and ANONYMOUS are implemented. 
-Support for other mechanisms may be added in the future. Only GSSAPI supports a QOP higher than auth.
-
+See README.md at `github.com/beltran/gosasl`
+this repository adds dynamic linking library interface to support windows platform from `github.com/beltran/gosasl`
 
 ## Installation
 Gosasl can be installed with:
 ```
-go get github.com/beltran/gosasl
+go get github.com/Sikurity/gosasl
 ```
 
 To add kerberos support gosasl requires header files to build against the GSSAPI C library. They can be installed with:
-- Ubuntu: `sudo apt-get install libkrb5-dev`
+- Ubuntu: `apt-get install libkrb5-dev`
 - MacOS: `brew install homebrew/dupes/heimdal --without-x11`
 - Debian: `yum install -y krb5-devel`
+- Windows: `choco install mitkerberos --install-arguments="ADDLOCAL=all"`
 
 Then:
 ```
-go get -tags kerberos github.com/beltran/gosasl
+go get -tags kerberos github.com/Sikurity/gosasl
 ```
 
 ## Example Usage
@@ -60,6 +58,3 @@ go get -tags kerberos github.com/beltran/gosasl
 
     client.Dispose()
 ```
-
-
-This library is inspired by [pure-sasl](https://github.com/thobbs/pure-sasl)
